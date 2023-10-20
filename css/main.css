@@ -218,9 +218,7 @@ nav {
   top: 0;
   box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.151);
 }
-.app__nav-list {
-  display: none;
-}
+
 .app__nav-checkbox {
   display: none;
 }
