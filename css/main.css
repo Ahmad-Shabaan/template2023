@@ -341,11 +341,11 @@ nav {
   .app__nav-list {
     opacity: 0;
     top: -1000%;
-    transition: var(--link-transition);
+    /* transition: var(--link-transition);
     -webkit-transition: var(--link-transition);
     -moz-transition: var(--link-transition);
     -ms-transition: var(--link-transition);
-    -o-transition: var(--link-transition);
+    -o-transition: var(--link-transition); */
     position: absolute;
     flex-direction: column;
     background-color: white;
@@ -357,8 +357,18 @@ nav {
     display: flex;
     opacity: 1;
     top: 100%;
+    -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+    animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     z-index: 999;
   }
+
+  .slide-bottom {
+    -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+    animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
   .app__nav-dropdown {
     position: absolute;
     left: 120%;
@@ -440,6 +450,28 @@ nav {
     padding: 10px 23px 10px 10px;
   }
 }
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
 /* 
 $$$$$$$$$$$$$$$$$$$ :) $$$$$$$$$$$$$$$$$$$
 End nav section
